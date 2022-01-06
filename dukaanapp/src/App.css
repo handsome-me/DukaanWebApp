@@ -78,3 +78,8 @@
   border-radius: 6px;
   cursor: not-allowed;
 }
+.productContainer{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+
+}
