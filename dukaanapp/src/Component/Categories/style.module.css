@@ -1,0 +1,37 @@
+
+.imagecss{
+    max-width:8rem;
+    border-radius: 0.50rem;
+  } 
+.cardcss{
+   margin:5px;
+   position: relative;
+   cursor: pointer;
+    border: 0.10rem ;
+    border-radius: 0.50rem;
+  }
+
+  .CategoriesTitleContainer{
+    position: absolute;
+    top: 0;
+    bottom:0;
+    width: 100%;
+    align-items: flex-end;
+    display: flex; 
+    background:  linear-gradient(rgba(2, 0, 36, 0) 0%, rgba(0, 0, 0, 0.4) 80%) !important;;
+
+  
+  }
+  .CategoriesTitleContainer h3{
+    font-size: 0.875rem;
+    padding-bottom: 0.50rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    text-transform: capitalize;
+    white-space: pre-wrap;
+    margin: 0px;
+    text-align: start ;
+
+  }
