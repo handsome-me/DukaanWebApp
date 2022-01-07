@@ -15,7 +15,7 @@ const ProductItem =({product}) => {
              <div className={styles.price}>
             <div>{product.original_cost}</div>
             </div>
-        <div className={styles.AddProdcut}><button>Add+</button></div>
+        <div className={styles.AddProduct}><button>Add +</button></div>
          </div>
          </div>
       </div>
