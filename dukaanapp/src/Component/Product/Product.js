@@ -1,22 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './styles.module.css';
+import ProductItem from '../ProductItem/ProductItem.jsx';
+import Space from '../Space/Space';
 
 const Product = ({product}) => {
     return (
-         <div className={styles.productCard}>
-           <div className={styles.productImage}>
-               <img src={product.image}></img>
-           </div>  
-           <div>
-              {product.name}
-            </div>
-         </div>
+         <div>
+           <div className={styles.productTitle}>
+          <h2>{product.category_name}</h2>
+          </div>
+          <div className={styles.productContainer}>
+              {
+              product.products.map((item)=>{
+                  return <ProductItem product={item}></ProductItem>
+              })
+            }
+            <Space></Space>
+          </div>
+          </div>
     );
 };
 
-Product.propTypes = {
-    
-};
-
+ 
 export default Product;

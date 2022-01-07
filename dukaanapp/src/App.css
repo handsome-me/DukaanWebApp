@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+   
   margin: 1rem;
   max-width: 70rem;
 }
@@ -78,8 +78,4 @@
   border-radius: 6px;
   cursor: not-allowed;
 }
-.productContainer{
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-
-}
+ 

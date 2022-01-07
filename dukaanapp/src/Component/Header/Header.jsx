@@ -4,7 +4,7 @@ export default function Header(){
 
 
     return (
-    <header>
+    <header style={{position:'sticky',top:0,zIndex:100,backgroundColor:'white'}}>
         <form className="header-menu-container">
         <input type="text" placeholder="search product"></input>
         <button type="button"> 
