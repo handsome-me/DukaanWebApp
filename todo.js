@@ -20,6 +20,12 @@
  * (if we want to do so then give the path of build folder which is going to serve to browser)
  * 7-Grid layout works?
  * repeat()minmax()
+ * 
+ * 
+ * 8-State Management using context  and useReducer
+ *  1-prop drilling problem?search
+ *  2-composition?seacrh
+ *  3-colocate in react
 */
 
 

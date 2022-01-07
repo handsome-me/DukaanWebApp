@@ -7,6 +7,7 @@ import Categories from './Component/Categories/Categories.jsx'
 import Header from './Component/Header/Header'
 import Space from './Component/Space/Space';
 import Product from './Component/Product/Product';
+import Cart from './Component/Cart/Cart'
 
 function App() {
 
@@ -19,7 +20,9 @@ function App() {
 
   return (
     <div className="App">
+      
       <Header/>
+      
       <Space/>
       <h1 style={{textAlign:"start"}}>Top Categories</h1>
         <div className="parent" style={css}>
@@ -36,8 +39,8 @@ function App() {
         
        }
        </div>
-         
-
+       <Cart></Cart>
+  
     </div>
   );
 }
