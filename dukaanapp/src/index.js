@@ -4,11 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import GlobalState from './Context/GlobalState';
+import Routes from './Routing/routes'
+import Navigation from './Routing/routes'
 
 ReactDOM.render(
   <React.StrictMode>
    <GlobalState>
-    <App />
+    <Navigation/>
      </GlobalState>
   </React.StrictMode>,
   document.getElementById('root')

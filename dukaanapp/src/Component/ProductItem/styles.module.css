@@ -7,8 +7,7 @@
 
 .productCard{
    width: 100%;
-   
-
+   cursor: pointer;
 }
 
 .productName{
@@ -28,6 +27,9 @@
    border:1px solid rgb(20, 110, 180);
    border-radius: 5px;
 
+}
+.AddProduct button{
+    cursor: pointer;
 }
 
 .AddProduct button:hover{

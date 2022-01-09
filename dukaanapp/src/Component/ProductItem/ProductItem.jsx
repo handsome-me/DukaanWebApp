@@ -1,13 +1,21 @@
-import React, { useContext } from 'react';
-import PropTypes from 'prop-types';
+import React ,{useContext} from 'react'
 import styles from './styles.module.css';
 import { State } from '../../Context/GlobalState';
+import { Routes, Link, Route, useParams, useNavigate } from "react-router-dom"
+
 
 const ProductItem =({product}) => {
     const {addItemToCart}=useContext(State);
-    console.log("val",useContext(State));
+    const navigate=useNavigate();
+    
+
+    function onClickProduct(){
+        console.log("prodct",product);
+        navigate('/product',{state:product});
+
+    }
     return (
-        <div className={styles.productCard}>
+        <div className={styles.productCard} onClick={onClickProduct}>
         <div className={styles.productImage}>
             <img src={product.image}></img>
         </div>  
