@@ -8,7 +8,7 @@ import Cart from '../Component/Cart/Cart'
 
 const Home = props => {
     return (
-        <div className="App">
+        <div>
         <Header/>
         <Space/>
         <h1 style={{textAlign:"start"}}>Top Categories</h1>

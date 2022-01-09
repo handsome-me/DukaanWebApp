@@ -9,13 +9,15 @@ import {
 import App from '../App';
 import NotFound from '../Pages/NotFound';
 import ProductDetail from '../Pages/ProductDetail/ProductDetail';
+import Home from '../Pages/Home';
+
 
 const Navigation = props => {
     return (
     <BrowserRouter>
     <Routes>
-    <Route exact path="/" element={<App />}/>
-    <Route path="/product" element={<ProductDetail/>}/>
+    <Route exact path="/" element={<App><Home/></App>}/>
+    <Route path="/product" element={<App><ProductDetail/></App>}/>
     <Route path='*' exact={true} element={<NotFound/>}/>
     </Routes>
     </BrowserRouter>
