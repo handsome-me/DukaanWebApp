@@ -8,8 +8,6 @@ const PRODUCT_CLICK="PRODUCT_CLICK";
 const ProductItem =({product}) => {
     const {addItemToCart}=useContext(State);
     const navigate=useNavigate();
-    
-
     function onClickEvent(event){
          event.preventDefault();
         const clickId=event.target.id;
@@ -20,7 +18,6 @@ const ProductItem =({product}) => {
             navigate('/product',{state:product}); 
         }
         
-
     }
     return (
         <div className={styles.productCard} id={PRODUCT_CLICK} onClick={onClickEvent}>
