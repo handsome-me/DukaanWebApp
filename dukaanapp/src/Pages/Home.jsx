@@ -26,7 +26,7 @@ const Home = props => {
           
          }
          </div>
-         <Cart></Cart>
+          
     
       </div>
     ); 

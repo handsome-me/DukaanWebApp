@@ -8,6 +8,11 @@
  * 5-Implement typescript 
  * 6-Position Sticky View
  * 
+ * 1/10/2022()
+ * 1-Implement View of footer including cart and home
+ * 2-Write state manangmenet using reducer and context
+ * 3-Make UI changes in porductList page
+ * 4-Start Adding typescript  
  */
 
 /**Learning 
@@ -32,7 +37,7 @@
  *   1-<Route exact="/"><Home/></Route>
  *     -In this pattern then you will not have access to props (match,location,history)
  *    link(https://dev.to/raaynaldo/react-router-three-route-rendering-methods-component-render-and-children-2eng)
- *  2-
+ *  2-React router v6 only created element props
 */
 
 
