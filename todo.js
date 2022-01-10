@@ -26,6 +26,13 @@
  *  1-prop drilling problem?search
  *  2-composition?seacrh
  *  3-colocate in react
+ * 
+ * 9-React Router
+ *  1-Three Route Rendering Methods (component, render, and children)
+ *   1-<Route exact="/"><Home/></Route>
+ *     -In this pattern then you will not have access to props (match,location,history)
+ *    link(https://dev.to/raaynaldo/react-router-three-route-rendering-methods-component-render-and-children-2eng)
+ *  2-
 */
 
 
