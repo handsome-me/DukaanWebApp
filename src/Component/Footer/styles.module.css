@@ -1,0 +1,25 @@
+.footerContainer{
+    display: flex;
+   position:sticky;
+   bottom: 1px;
+   padding: 1rem;
+  background-color: #f2f2f2;
+
+   
+}
+
+.footer{
+    width: 100%;
+}
+.item{
+    flex-basis: 25%;
+    cursor: pointer;
+}
+
+.item div{
+    text-align: center;
+}
+.item img{
+    width: 40px;
+    height: 40px;
+}

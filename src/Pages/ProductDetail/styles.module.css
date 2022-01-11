@@ -1,0 +1,38 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.productImage{
+    width: 40%;
+    height: auto;
+    display: flex;
+}
+
+.productImage img{
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.detail{
+    margin:10px 10px 10px 4rem;
+}
+
+.productName{
+    font-weight: normal;
+}
+
+@media screen and (max-width: 600px) {
+    .productImage{
+        width: 100%;
+    }
+    .container{
+        flex-direction: column;
+        justify-content:inherit;
+    }
+    
+.detail{
+    margin:0px;
+}
+  }
