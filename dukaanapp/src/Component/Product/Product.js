@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './styles.module.css';
 import ProductItem from '../ProductItem/ProductItem.jsx';
 import Space from '../Space/Space';
+import { products } from '../../jsonCategory';
 
 const Product = ({product}) => {
     return (
@@ -13,7 +14,7 @@ const Product = ({product}) => {
           <div className={styles.productContainer}>
               {
               product.products.map((item)=>{
-                  return <ProductItem product={item}></ProductItem>
+                  return <ProductItem product={item} category_id={product.category_id}></ProductItem>
               })
             }
             <Space></Space>

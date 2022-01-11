@@ -26,6 +26,8 @@
  * 7-Grid layout works?
  * repeat()minmax()
  * 
+ * https://stackoverflow.com/questions/54892403/usereducer-action-dispatched-twice
+ * 
  * 
  * 8-State Management using context  and useReducer
  *  1-prop drilling problem?search

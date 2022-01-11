@@ -11,6 +11,7 @@ import NotFound from '../Pages/NotFound';
 import ProductDetail from '../Pages/ProductDetail/ProductDetail';
 import Home from '../Pages/Home';
 import ProductList from '../Pages/ProductList/ProductList';
+import Cartitem from '../Pages/CartItem/Cartitem';
 
 
 const Navigation = props => {
@@ -20,6 +21,7 @@ const Navigation = props => {
     <Route exact path="/" element={<App><Home/></App>}/>
     <Route path="/product" element={<App><ProductDetail/></App>}/>
     <Route path="/productList" element={<App><ProductList/></App>}/>
+    <Route path="/mycart" element={<App><Cartitem/></App>}/>
     <Route path='*' exact={true} element={<NotFound/>}/>
     </Routes>
     </BrowserRouter>
