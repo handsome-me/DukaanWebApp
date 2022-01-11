@@ -1,9 +1,15 @@
 
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import styles from './styles.module.css'
+import { useLocation } from 'react-router-dom';
+import { State } from '../../Context/GlobalState';
 
-const Footer = props => {
+const Footer = ({order}) => {
+     
+     const state= useContext(State);
+     console.log("orders are",state);
+
     return (
         <div className={styles.footerContainer}>
         <footer className={styles.footer} style={{display: 'flex'}} >
@@ -25,6 +31,7 @@ const Footer = props => {
         <div>
         <img src="https://img.icons8.com/ios/50/000000/shopping-bag--v3.png"/>
         <h3>Bag</h3>
+        <small>{state.cart.length}</small>
         </div> 
            
          </div> 

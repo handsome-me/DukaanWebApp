@@ -26,8 +26,6 @@ const Home = props => {
           
          }
          </div>
-          
-    
       </div>
     ); 
 };
