@@ -11,7 +11,7 @@ function App({children}) {
         <>
       <div className="App">
         {children}
-        </div>
+        </div> 
         <Footer></Footer>
         </>
     )
