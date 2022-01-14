@@ -8,11 +8,11 @@ import Routes from './Routing/routes'
 import Navigation from './Routing/routes'
 
 ReactDOM.render(
-  <React.StrictMode>
+   
    <GlobalState>
     <Navigation/>
      </GlobalState>
-  </React.StrictMode>,
+  ,
   document.getElementById('root')
 );
 
