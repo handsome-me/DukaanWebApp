@@ -1,0 +1,29 @@
+.buttonContainer{
+    display: flex;
+    
+}
+.buttonSpan{
+
+    font-size: large;
+    color: #52b0cf;
+}
+
+.counterNumber{
+    display: flex;
+    align-items: center;
+   background-color:rgba(20, 110, 180, 0.1);
+
+}
+
+.counterNumber  span{
+  padding: 7px 5px;
+  width: 16px;
+  text-align: center;
+}
+
+.buttonContainer button{
+    border: none;
+    background-color: transparent;
+    padding: 0px 10px;
+    cursor: pointer;
+}
