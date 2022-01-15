@@ -8,7 +8,13 @@ const initialState={
     orders:[]
 }
 function filterIdFromState(id,state){
-    return state.cart.filter((itemId)=>itemId!==id)
+    console.log("state",state,"---itemId---",id);
+    return state.cart.filter((item)=>{
+        console.log(item);
+         if(item.id!==id){
+             return true;
+         }
+    })
 }
 function reducer(preState,Action){
     try{
@@ -34,17 +40,39 @@ function reducer(preState,Action){
         // }
         //END - dont remove,it helps to undestand concept (reducer gets called 2 time for purity check)
         //link- https://stackoverflow.com/questions/54892403/usereducer-action-dispatched-twice
+
+
+        //first find the id the id is present in array 
+        //if yes then increase the count of that array else create new element
+        // [ cart:[{id, category_id , productCount}] ]
+        let updatedCart;
+       
+        const  isPresent=preState.cart.find((item)=>item.id===Action.data.id);
+         
+        if(isPresent){
+            preState.cart.forEach((item)=>{
+            console.log("item",item)
+                if(item.id===Action.data.id){
+                    item.productCount++;
+                }
+
+            })
+        }else{
+            //find if element is already present
+            preState.cart=[...preState.cart,{...Action.data,productCount:1}]
+        }
+         
         return{
             ...preState,
-            cart:[...preState.cart,Action.data],
-            
+            cart:[...preState.cart]
+
         }
 
     }
 
         case REMOVE_ITEM:{
             const updateStateCart=filterIdFromState(Action.data,preState)
-             
+            console.log("updateCart",updateStateCart);
             return {
                 ...preState,
                 cart:updateStateCart
