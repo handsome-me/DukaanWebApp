@@ -1,3 +1,4 @@
+import { queryAllByPlaceholderText } from '@testing-library/react';
 import React ,{createContext}from 'react';
 
 export const State=createContext();
@@ -20,8 +21,9 @@ function reducer(preState,Action){
     try{
    console.log("action",Action);
    console.log("preState",preState);
+   let updatedCart= getUpdatedCart(Action.data.id,Action,preState);
      switch(Action.type){
-        
+
         case ADD_ITEM:{
 
      
@@ -45,39 +47,23 @@ function reducer(preState,Action){
         //first find the id the id is present in array 
         //if yes then increase the count of that array else create new element
         // [ cart:[{id, category_id , productCount}] ]
-        let updatedCart;
-       
-        const  isPresent=preState.cart.find((item)=>item.id===Action.data.id);
-         
-        if(isPresent){
-            preState.cart.forEach((item)=>{
-            console.log("item",item)
-                if(item.id===Action.data.id){
-                    item.productCount++;
-                }
-
-            })
-        }else{
-            //find if element is already present
-            preState.cart=[...preState.cart,{...Action.data,productCount:1}]
-        }
-         
+        
+        
         return{
             ...preState,
-            cart:[...preState.cart]
+            cart:updatedCart
 
-        }
+          }
 
     }
 
         case REMOVE_ITEM:{
-            const updateStateCart=filterIdFromState(Action.data,preState)
-            console.log("updateCart",updateStateCart);
+           // const updateStateCart=filterIdFromState(Action.data,preState)
+            console.log("updateCart",updatedCart);
             return {
                 ...preState,
-                cart:updateStateCart
-            }
-    
+                cart:updatedCart
+             }
         }
 
      }
@@ -87,6 +73,40 @@ function reducer(preState,Action){
 
 }
 
+
+function getUpdatedCart(id, Action,preState){
+    const  isPresent=preState.cart.find((item)=>item.id===id);
+         console.log("Actionin getUdate",Action);
+    if(isPresent){
+        preState.cart.forEach((item)=>{
+        console.log("item",item)
+            if(item.id===id){
+                if(Action.type===ADD_ITEM){
+                    item.productCount=Action.data.productCount;
+                }else{
+                    item.productCount=Action.data.productCount;
+                    if(item.productCount===0){
+                        //remove that item
+                       const updatedCartAfterDel=preState.cart.filter((item)=>{
+                            if(item.id!==id)return;
+                       })
+                       preState.cart=updatedCartAfterDel;
+                    }
+                }
+                
+            }
+
+        })
+    }else{
+        //find if element is already present
+        const count=Action.type===ADD_ITEM?1:0;
+        preState.cart=[...preState.cart,{...Action.data,productCount:count}]
+    };
+     
+   return [...preState.cart];
+   
+
+}
  
 
 export default function GlobalState({children}){

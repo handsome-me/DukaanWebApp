@@ -6,12 +6,14 @@ import { useLocation } from 'react-router';
 
 const ProductList = () => {
      const {category_id} =useLocation().state;
+     console.log("category_id",category_id);
      const prductArray=data.filter((product)=>product.category_id===category_id)
     return (
-        <div style={{display:'flex',flexWrap:'wrap'}}>
+        <div style={{display:'flex',flexWrap:'wrap',gap:'10px'}}>
          {
              prductArray[0].products.map((product)=>{
-                 return <ProductItem product={product}/>
+                 product.category_id=category_id;
+                 return <div style={{display:"flex", flex:"300px"}}><ProductItem product={product}/></div>
              })
          }
         </div>

@@ -3,22 +3,27 @@ import styles from './styles.module.css';
 import { State } from '../../Context/GlobalState';
 import { Routes, Link, Route, useParams, useNavigate } from "react-router-dom"
 import Counter from '../Counter/Counter';
+import { products } from '../../jsonCategory';
 const ADD_BTN="ADD_BTN";
 const PRODUCT_CLICK="PRODUCT_CLICK";
 const REMOVE_ITEM="REMOVE_ITEM";
 
 const ProductItem =({product,category_id}) => {
+
     const {addItemToCart, ADD_ITEM,REMOVE_ITEM}=useContext(State);
     const navigate=useNavigate();
-    function onClickEvent(event,btnType ){
+   // const category_id=product.category_id;
+    
+    function onClickEvent(event,btnType ,productCount){
+      console.log("category_id","#121",category_id);
         event.preventDefault();
 
         if(btnType===ADD_BTN){
-            addItemToCart({type:ADD_ITEM, data:{id:product.id,category_id:category_id } });
+            addItemToCart({type:ADD_ITEM, data:{id:product.id,category_id:product.category_id?product.category_id:category_id ,productCount} });
             return;
             }
             if(btnType===REMOVE_ITEM){
-                addItemToCart({type:REMOVE_ITEM, data:{id:product.id,category_id:category_id} });
+                addItemToCart({type:REMOVE_ITEM, data:{id:product.id,category_id:category_id,productCount} });
                 return;
                 }
 

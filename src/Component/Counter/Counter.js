@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './styles.module.css';
 const INCREAMENT_COUNT="INCREAMENT_COUNT";
 const DECREAMENT_COUNT="DECREAMENT_COUNT";
@@ -20,24 +20,23 @@ const Counter = ({onClickEvent}) => {
             setCounter((preCounter)=>{
                 return preCounter+1;
             })
-            
-            
-            onClickEvent(event,ADD_BTN);
-            return;
-
+            onClickEvent(event,ADD_BTN,counter+1);
           } 
           if(id===DECREAMENT_COUNT){
             if(counter===0)return;
             setCounter((preCounter)=>{
                 return preCounter-1;
             })
-            
-             
-            onClickEvent(event ,REMOVE_ITEM);
-              return;
+            onClickEvent(event,REMOVE_ITEM,counter-1);
           }
 
      }
+
+
+     useEffect(()=>{
+         
+
+     },[counter])
 
     return (
         <div style={{display:"flex",border:'1px solid #52b0cf',borderRadius:"2px"}}>
