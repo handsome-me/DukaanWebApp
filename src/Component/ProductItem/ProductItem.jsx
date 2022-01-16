@@ -28,15 +28,11 @@ const ProductItem =({product,category_id}) => {
                 }
 
          
-         
         const clickId=event.target.id;
-      
-    
             console.log("prodct",console.log("event",event));
             navigate('/product',{state:product}); 
+        }
         
-        
-    }
     return (
         <div className={styles.productCard}  >
         <div className={styles.productImage} id={PRODUCT_CLICK} onClick={onClickEvent}>
