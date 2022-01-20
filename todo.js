@@ -40,7 +40,12 @@
  *     -In this pattern then you will not have access to props (match,location,history)
  *    link(https://dev.to/raaynaldo/react-router-three-route-rendering-methods-component-render-and-children-2eng)
  *  2-React router v6 only created element props
+ * 
+ *  ---CSS---
+ * Responsiveness using flexbox and gridlayout
+ * flex-grow , flex-shrink
 */
+  
 
 
  

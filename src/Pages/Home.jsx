@@ -30,6 +30,7 @@ const Home = props => {
     ); 
 };
 
+//merge the confilict with homepage
 
 const css={
     whiteSpace:"nowrap",
